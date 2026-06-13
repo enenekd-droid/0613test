@@ -5,8 +5,9 @@
     --accent-1: #6366f1;
     --accent-2: #c026d3;
     --accent-3: #3b82f6;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -78,12 +79,13 @@ body {
 /* Glassmorphism Utilities */
 .glass-panel {
     background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
     padding: 40px;
-    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 8px 32px 0 var(--glass-shadow);
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Typography & Layout */
